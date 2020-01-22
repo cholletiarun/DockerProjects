@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t sag/wmtravisdemo -f Dockerfile.dev
+    - docker build -t sag/wmtravisdemo -f Dockerfile.dev .
 
 install:
     - docker run --rm -d -p 2323:5656/tcp  wmcustomdockerdemo:git
