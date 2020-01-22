@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="enabled">yes</value>
+  <value name="system_package">yes</value>
+  <value name="classloader">package</value>
+  <value name="version">9.10.0.0</value>
+  <value name="build">42</value>
+  <value name="jvm_version">1.8</value>
+  <value name="publisher">Software AG</value>
+  <value name="listACL">Developers</value>
+  <value name="browseACL">Default</value>
+  <value name="description">webMethods Adapter for JDBC</value>
+  <record name="startup_services" javaclass="com.wm.util.Values">
+    <null name="wm.adapter.wmjdbc.admin:registerAdapter"/>
+  </record>
+  <record name="shutdown_services" javaclass="com.wm.util.Values">
+    <null name="wm.adapter.wmjdbc.admin:unregisterAdapter"/>
+  </record>
+  <record name="requires" javaclass="com.wm.util.Values">
+    <value name="WmART">*.*</value>
+  </record>
+  <array name="patch_history" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="name">JDBC_9.10_Fix5</value>
+      <value name="version">9.10</value>
+      <value name="build">42</value>
+      <value name="description">webMethods Adapter 9.10 For JDBC 9.10 Fix 5</value>
+      <value name="time">2017-06-28</value>
+      <value name="jvm_version">1.8</value>
+      <value name="publisher">Software AG</value>
+      <value name="patch_nums"></value>
+    </record>
+  </array>
+</Values>

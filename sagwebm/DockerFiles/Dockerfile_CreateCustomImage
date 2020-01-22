@@ -1,0 +1,8 @@
+#Speciify Base Image.
+FROM wmdockerdemoimage
+
+#Download and isntall dependency.
+ COPY  packages /sag/IntegrationServer/instances/default/packages/
+
+#Tell the image what to do when it starts as container.
+CMD  /sag/IntegrationServer/instances/default/bin/server.sh;sleep infinity;
