@@ -1,3 +1,12 @@
 sudo: required
 services:
     - docker
+
+before_install:
+    - docker build -t sag/wmtravisdemo -f Dockerfile.dev
+
+install:
+    - docker run --rm -d -p 2323:5656/tcp  wmcustomdockerdemo:git
+
+script:
+    - docker run -t postman/newman_ubuntu1404 run "https://www.getpostman.com/collections/5c7d9e498099cdb1aae3"
