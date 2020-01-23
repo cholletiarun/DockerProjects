@@ -1,7 +1,7 @@
 #Speciify Base Image.
 ARG USER=dockertrainingarun
 ARG PASSWORD=google@jun2017
-FROM dockertrainingarun/wmdockerdemoimage USER:${USER} PASSWORD:${PASSWORD}
+FROM dockertrainingarun/wmdockerdemoimage ${USER} ${PASSWORD}
 
 #Download and isntall dependency.
  RUN yum -y install git
