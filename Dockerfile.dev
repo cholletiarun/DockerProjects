@@ -1,8 +1,5 @@
-#docker login
-docker login
-
 #Speciify Base Image.
-FROM dockertrainingarun/wmdockerdemoimage
+FROM dockertrainingarun/wmdockerdemoimage ARG dockertrainingarun ARG google@jun2017
 
 #Download and isntall dependency.
  RUN yum -y install git
