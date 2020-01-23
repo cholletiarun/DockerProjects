@@ -1,3 +1,6 @@
+#docker login
+docker login
+
 #Speciify Base Image.
 FROM dockertrainingarun/wmdockerdemoimage
 
