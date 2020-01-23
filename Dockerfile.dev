@@ -1,5 +1,5 @@
 #Speciify Base Image.
-FROM store/softwareag/webmethods-microservicesruntime:10.5
+FROM dockertrainingarun/wmdockerdemoimage
 
 #Download and isntall dependency.
  RUN yum -y install git
