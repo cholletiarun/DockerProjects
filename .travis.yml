@@ -10,7 +10,8 @@ install:
     - docker run --rm -d -p 2323:5656/tcp  sag/wmtravisdemo
 
 before_script:
-    - sleep 60
+    - sleep 180
 
 script:
+    - 
     - docker run -t postman/newman_ubuntu1404 run "https://www.getpostman.com/collections/d20634b17e4dcf8eab5e"
