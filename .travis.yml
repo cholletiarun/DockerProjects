@@ -14,7 +14,9 @@ before_script:
 
 script:
     - /sbin/ifconfig
-    - cat /etc/os-release
     - cat /etc/hosts
-    - curl http://localhost:2323/
+    - curl http://172.17.0.1:2323/
+    - nslookup nat.travisci.net
+    - docker ps
+    - docker-machine ip
     - docker run -t postman/newman_ubuntu1404 run "https://www.getpostman.com/collections/a448186f492fb0e14e68"
