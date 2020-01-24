@@ -10,7 +10,6 @@ install:
     - docker run --rm -d -p 2323:5656/tcp  sag/wmtravisdemo
 
 before_script:
-    - docker-machine ip
     - sleep 200
 
 script:
