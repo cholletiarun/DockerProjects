@@ -1,6 +1,9 @@
 #Speciify Base Image.
 FROM store/softwareag/webmethods-microservicesruntime:10.5
 
+#switch user to root
+USER root
+
 #Download and isntall dependency.
  RUN yum -y install git
 
