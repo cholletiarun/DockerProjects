@@ -14,7 +14,5 @@ before_script:
     - sleep 160
 
 script:
-    - /sbin/ifconfig
-    - curl -u Administrator:manage http://172.17.0.1:2323/
     - docker ps
     - docker run -t postman/newman_ubuntu1404 run "https://www.getpostman.com/collections/7a621e2f033748c005a1"
