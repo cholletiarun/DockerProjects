@@ -10,6 +10,8 @@ install:
     - docker run --rm -d -p 2323:5555/tcp  sag/wmtravisdemo
 
 before_script:
+    - export HOST_IP_ADDRESS="$(/sbin/ip route|awk '/default/ { print $3 }')"
+    - echo $HOST_IP_ADDRESS
     - sleep 200
 
 script:
