@@ -10,12 +10,11 @@ install:
     - docker run --rm -d -p 2323:5555/tcp  sag/wmtravisdemo
 
 before_script:
-    - cat /etc/os-release
-    - /sbin/ifconfig
-    - cat /etc/hosts
-    
     - sleep 2
 
 script:
+    - /sbin/ifconfig
+    - cat /etc/os-release
+    - cat /etc/hosts
     - curl http://localhost:2323/
     - docker run -t postman/newman_ubuntu1404 run "https://www.getpostman.com/collections/a448186f492fb0e14e68"
