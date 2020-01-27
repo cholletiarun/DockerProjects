@@ -16,3 +16,16 @@ before_script:
 script:
     - docker ps
     - docker run -t postman/newman_ubuntu1404 run "https://www.getpostman.com/collections/7a621e2f033748c005a1"
+
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "sagwm-docker"
+    env: "SagwmDocker-env"
+    bucket_name: "elasticbeanstalk-us-east-2-708079046448"
+    bucket_path: "sagwm-docker"
+    on:
+        branch : master        
+    aws_key_id: $AWS_ACCESS_KEY
+    secret_access_key:
+        secure: "$AWS_SECRET_KEY"
