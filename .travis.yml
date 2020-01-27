@@ -26,5 +26,5 @@ deploy:
     bucket_path: "sagwm-docker"
     on:
         branch : master        
-    aws_key_id: $AWS_ACCESS_KEY
+    access_key_id: $AWS_ACCESS_KEY
     secret_access_key: "$AWS_SECRET_KEY"
