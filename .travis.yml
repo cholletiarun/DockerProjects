@@ -7,7 +7,7 @@ before_install:
     - docker build -t sag/wmtravisdemo -f Dockerfile.dev .
 
 install:
-    - docker run --rm -d -p 2323:5555/tcp sag/wmtravisdemo:latest .
+    - docker run --rm -d -p 2323:5555/tcp dodkerdemorepo:latest .
     - docker ps
 
 before_script:
@@ -18,8 +18,9 @@ script:
     - docker run -t postman/newman_ubuntu1404 run "https://www.getpostman.com/collections/7a621e2f033748c005a1"
 
 after_success:
+    - pip3 install awscli --upgrade --user
     - export PATH=$PATH:/$HOME/.local/bin
     - eval $(aws ecr get-login --region us-east-2 --no-include-email)
-    - docker tag wmtravisdemo:latest  708079046448.dkr.ecr.us-east-2.amazonaws.com/wmtravisdemo:latest
-    - docker push 708079046448.dkr.ecr.us-east-2.amazonaws.com/wmtravisdemo:latest
-    - pip3 install awscli --upgrade --user
+    - docker tag dodkerdemorepo:latest 708079046448.dkr.ecr.us-east-2.amazonaws.com/dodkerdemorepo:latest
+    - docker push 708079046448.dkr.ecr.us-east-2.amazonaws.com/sag/dodkerdemorepo:latest
+    
