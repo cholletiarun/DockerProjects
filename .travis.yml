@@ -4,7 +4,7 @@ services:
 
 before_install:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker build -t sag/wmtravisdemo -f Dockerfile.dev .
+    - docker build -t dodkerdemorepo -f Dockerfile.dev .
 
 install:
     - docker run --rm -d -p 2323:5555/tcp dodkerdemorepo:latest .
