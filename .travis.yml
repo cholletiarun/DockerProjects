@@ -18,7 +18,7 @@ script:
     - docker run -t postman/newman_ubuntu1404 run "https://www.getpostman.com/collections/7a621e2f033748c005a1"
 
 after_success:
-    - pip install awscli
+    - pip install --user awscli
     - export PATH=$PATH:/$HOME/.local/bin
     - eval $(aws ecr get-login --region us-east-2 --no-include-email)
     - docker tag dodkerdemorepo:latest 708079046448.dkr.ecr.us-east-2.amazonaws.com/dodkerdemorepo:latest
