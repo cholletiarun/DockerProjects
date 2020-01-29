@@ -11,7 +11,7 @@ install:
     - docker ps
 
 before_script:
-    - sleep 150
+    - sleep 152
 
 script:
     - docker ps
@@ -23,4 +23,6 @@ after_success:
     - eval $(aws ecr get-login --region us-east-2 --no-include-email)
     - docker tag dodkerdemorepo:latest 708079046448.dkr.ecr.us-east-2.amazonaws.com/dodkerdemorepo:latest
     - docker push 708079046448.dkr.ecr.us-east-2.amazonaws.com/dodkerdemorepo:latest
-    
+
+deploy:
+    - ecs-deploy -c $CLUSTER_NAME -n $SERVICE_NAME -i $IMAGE_REPO_URL:latest
