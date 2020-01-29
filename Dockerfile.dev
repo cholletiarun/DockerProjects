@@ -23,4 +23,4 @@ RUN mkdir /home/temppacks \
  && cp -r /home/temppacks/packages/* /opt/softwareag/IntegrationServer/packages
 
 #Tell the image what to do when it starts as container.
-CMD  /opt/softwareag/IntegrationServer/bin/server.sh;sleep infinity;
+CMD nohup /opt/softwareag/IntegrationServer/bin/startup.sh;sleep infinity;
