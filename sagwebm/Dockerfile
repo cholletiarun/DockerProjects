@@ -22,5 +22,3 @@ RUN mkdir /home/temppacks \
  && git clone https://github.com/cholletiarun/packages.git \
  && cp -r /home/temppacks/packages/* /opt/softwareag/IntegrationServer/packages
 
-#Tell the image what to do when it starts as container.
-CMD nohup /opt/softwareag/IntegrationServer/bin/startup.sh;sleep infinity;
