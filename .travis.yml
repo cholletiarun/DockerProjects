@@ -19,6 +19,9 @@ script:
 
 after_success:
     - pip install --user awscli
+    - add-apt-repository ppa:eugenesan/ppa
+    - apt-get update
+    - apt-get install jq -y
     - export PATH=$PATH:/$HOME/.local/bin
     - eval $(aws ecr get-login --region us-east-2 --no-include-email)
     - docker tag dodkerdemorepo:latest 708079046448.dkr.ecr.us-east-2.amazonaws.com/dodkerdemorepo:latest
