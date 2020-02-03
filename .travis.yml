@@ -11,7 +11,7 @@ install:
     - docker ps
 
 before_script:
-    - sleep 153
+    - sleep 152
 
 script:
     - docker ps
