@@ -21,4 +21,3 @@ RUN mkdir /home/temppacks \
  && cd /home/temppacks \
  && git clone https://github.com/cholletiarun/packages.git \
  && cp -r /home/temppacks/packages/* /opt/softwareag/IntegrationServer/packages
-
