@@ -14,7 +14,7 @@ ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN mkdir /home/tempjars \
  && cd /home/tempjars \
  && git clone https://github.com/cholletiarun/adapterjars.git \
- && cp -r /home/tempjars/adapterjars/* /opt/softwareag/IntegrationServer/lib/jars
+ && cp -r /home/tempjars/adapter-jars/* /opt/softwareag/IntegrationServer/lib/jars
 
 #COPY  packages /sag/IntegrationServer/instances/default/packages/
 RUN mkdir /home/temppacks \
