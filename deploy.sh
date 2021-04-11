@@ -20,5 +20,5 @@ docker tag dodkerdemorepo:latest 708079046448.dkr.ecr.us-east-2.amazonaws.com/do
 docker push 708079046448.dkr.ecr.us-east-2.amazonaws.com/dodkerdemorepo:latest
 
 
-# update an AWS ECS service with the new images
+# update an AWS ECS service with the new imagesaa
 ecs-deploy -c sagwmcluster -n samwmservice -i 708079046448.dkr.ecr.us-east-2.amazonaws.com/dodkerdemorepo:latest
