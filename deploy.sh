@@ -21,4 +21,4 @@ docker push 708079046448.dkr.ecr.us-east-2.amazonaws.com/dodkerdemorepo:latest
 
 
 # update an AWS ECS service with the new imagesaa
-ecs-deploy -c sagwmcluster -n samwmservice -i 708079046448.dkr.ecr.us-east-2.amazonaws.com/dodkerdemorepo:latest
+ecs-deploy -c sagwmcluster -n sagwmservice -i 708079046448.dkr.ecr.us-east-2.amazonaws.com/dodkerdemorepo:latest
